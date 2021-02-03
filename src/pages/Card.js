@@ -14,9 +14,7 @@ function Card() {
     const forecast = useSelector(state => state.forecast);
 
     useEffect(() => {
-        // setTimeout(() => {
-            setPageLoaded(true);
-        // }, 200);
+        setPageLoaded(true);
     }, []);
 
     if (chosenLocation.pending || forecast.pending) {
