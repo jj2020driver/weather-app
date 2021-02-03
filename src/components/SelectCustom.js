@@ -10,7 +10,7 @@ const DropdownIndicator = (props) => null;
 const IndicatorSeparator = (props) => null;
 
 async function fetchCityInput({ city }) {
-    const url = "http://api.openweathermap.org/data/2.5/weather";
+    const url = "https://api.openweathermap.org/data/2.5/weather";
     const apiKey = "cfef6851883684acafd83bd9c8128de5";
     const response = await fetch(`${url}?q=${city}&appid=${apiKey}&units=metric`);
     const json = await response.json();

@@ -21,7 +21,7 @@ export function fetchForecastError(error) {
 export function fetchForecast({ id }) {
     return async dispatch => {
         dispatch(fetchForecastPending());
-        const url = "http://api.openweathermap.org/data/2.5/forecast";
+        const url = "https://api.openweathermap.org/data/2.5/forecast";
         const apiKey = "cfef6851883684acafd83bd9c8128de5";
         try {
             const response = await fetch(`${url}?id=${id}&appid=${apiKey}&units=metric`);

@@ -28,7 +28,7 @@ export function getUserLocation() {
             window.navigator.geolocation.getCurrentPosition(({ coords: {latitude, longitude}}) => {
 
                 (async () => {
-                    const url = "http://api.openweathermap.org/data/2.5/weather";
+                    const url = "https://api.openweathermap.org/data/2.5/weather";
                     const apiKey = "cfef6851883684acafd83bd9c8128de5";
                     try {
                         const response = await fetch(`${url}?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`);
