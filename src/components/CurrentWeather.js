@@ -12,7 +12,7 @@ function CurrentWeather() {
         return null;
     } else {
         const currentWeatherDate = getReadableDateTime(chosenLocation.data.dt);
-        currentWeatherDateOutput = `${currentWeatherDate.fullDay}, ${currentWeatherDate.hours}:${currentWeatherDate.minutes}`;
+        currentWeatherDateOutput = `${currentWeatherDate.fullDay}, ${currentWeatherDate.date}`;
         const sunriseDate = getReadableDateTime(chosenLocation.data.sys.sunrise);
         sunriseDateOutput = `${sunriseDate.hours}:${sunriseDate.minutes}`;
         const sunsetDate = getReadableDateTime(chosenLocation.data.sys.sunset);
