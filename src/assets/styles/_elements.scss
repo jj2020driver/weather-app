@@ -1,0 +1,29 @@
+.logo-big {
+    display: block;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    @include rm($bp-tab-sm) {
+        width: 220px;
+        margin-bottom: 40px;
+    }
+}
+
+.nav-link {
+    display: inline-block;
+    font-size: 15px;
+    color: $color-ui-main;
+    transition: color $time12;
+    span {
+        position: relative;
+        display: inline-block;
+        transition: transform $time12;
+    }
+    &:hover {
+        color: $color-ui-main-darken;
+        span {
+            transform: translate(-3px, 0);
+        }
+    }
+}

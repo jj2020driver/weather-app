@@ -1,0 +1,131 @@
+.page-title {
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 700;
+    @include rm($bp-tab-sm) {
+        font-size: 24px;
+    }
+}
+.module-title {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 700;
+    @include rm($bp-tab-sm) {
+        font-size: 20px;
+    }
+}
+
+.info-block {
+    display: grid;
+    grid-gap: 5px;
+    &__title {
+        font-size: 13px;
+    }
+    &__value {
+        font-size: 16px;
+        font-weight: 600;
+    }
+    &__value-sm {
+        font-size: 82%;
+    }
+}
+
+.day {
+    display: grid;
+    width: 100%;
+    padding: 12px 10px;
+    text-align: left;
+    background: #f5f5f5;
+    grid-gap: 10px;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    &__title {
+        font-size: 18px;
+        font-weight: 700;
+    }
+    .info-block {
+        grid-auto-flow: column;
+        align-items: center;
+    }
+    @include rm($bp-phone-md) {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        grid-auto-flow: row;
+        grid-template-columns: 1fr;
+        text-align: center;
+        &__title {
+            font-size: 17px;
+        }
+        .info-block {
+            grid-auto-flow: row;
+        }
+    }
+}
+.days {
+    display: grid;
+    border-radius: 22px;
+    overflow: hidden;
+    grid-gap: 2px;
+    @include rm($bp-phone-md) {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+}
+
+.current-weather {
+    .info-blocks {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+    }
+}
+.forecast {
+    .info-block {
+        &__value {
+            font-size: 15px;
+        }
+    }
+    .info-blocks {
+        display: grid;
+        grid-gap: 10px;
+    }
+}
+.card {
+    padding: 24px 0;
+    @include inner-nomargin;
+    &__title {
+        margin-bottom: 22px;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+    &__module {
+        margin-bottom: 32px;
+    }
+    &.animate {
+        animation: card-appearance .45s $easeOutCubic forwards;
+        // opacity: 0;
+        // visibility: hidden;
+        // transform: translate(0, 15px);
+        // transition: opacity, visibility, transform;
+        // transition-duration: $time45;
+        // &.animated {
+        //     opacity: 1;
+        //     visibility: visible;
+        //     transform: translate(0, 0);
+        // }
+    }
+}
+@keyframes card-appearance {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(0, 15px);
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0, 0);
+    }
+}

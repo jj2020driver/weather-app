@@ -1,0 +1,105 @@
+.search-form {
+    position: relative;
+    transition: opacity $time;
+
+    .select {
+        width: 100%;
+        font-size: 15px;
+        &__control {
+            height: 44px;
+            padding-right: 140px;
+            box-shadow: none;
+            border-color: $color-ui-grey;
+            border-right: none;
+            border-radius: 0;
+            border-radius: 22px;
+            // border-top-left-radius: 22px;
+            // border-bottom-left-radius: 22px;
+            // border-top-right-radius: 30px;
+            // border-bottom-right-radius: 30px;
+            cursor: text;
+            &:hover {
+                border-color: $color-ui-grey;
+            }
+        }
+        &__value-container {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+        &__menu {
+            // display: none;
+            overflow: hidden;
+            border-radius: 0;
+            box-shadow: none;
+            border: 1px solid #aaa;
+            border-radius: 22px;
+        }
+        &__option {
+            padding-left: 16px;
+            padding-right: 16px;
+            cursor: pointer;
+            background: none !important;
+            transition: color $time12;
+            &--is-selected {
+                color: $color-ui-main-dark;
+            }
+            &:hover {
+                color: $color-ui-main;
+            }
+            &:active {
+                color: $color-ui-main-dark;
+            }
+        }
+        &--show-menu {
+            .select {
+                &__menu {
+                    display: block;
+                }
+            }
+        }
+    }
+    > button {
+        @include raw-box;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 110px;
+        height: 44px;
+        padding: 5px 12px 5px 8px;
+        font-size: 12px;
+        line-height: 1.2;
+        font-weight: 600;
+        text-align: center;
+        text-transform: uppercase;
+        background: $color-ui-main;
+        color: #fff;
+        border-top-right-radius: 22px;
+        border-bottom-right-radius: 22px;
+        cursor: pointer;
+        transition: background $time12;
+        &:hover {
+            background: $color-ui-main-darken;
+        }
+    }
+
+    &.data-pending {
+        pointer-events: none;
+        opacity: .7;
+        > button {
+            background: $color-ui-main-darken;
+        }
+    }
+    
+    @include rm($bp-tab-sm) {
+        .select {
+            &__control {
+                padding-right: 180px;
+            }
+        }
+        > button {
+            width: 180px;
+            font-size: 13px;
+        }
+    }
+
+}

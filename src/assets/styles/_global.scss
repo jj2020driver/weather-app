@@ -1,0 +1,51 @@
+// custom reset
+* {
+	box-sizing: border-box;
+	outline: none;
+}
+body {
+    font-size: 0;
+    line-height: 1.25;
+	color: $color-text-base;
+}
+.test-text {
+    font-size: 15px;
+}
+code {
+    display: block;
+    font-size: 13px;
+    line-height: normal;
+    white-space: pre-wrap;
+}
+.codes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+}
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	font-weight: normal;
+}
+a {
+	text-decoration: none;
+	color: $color-text-base;
+}
+
+// basic page grid elements
+.page-container {
+    padding: 20px 0;
+    @include rm($bp-tab-sm) {
+        padding: 6% 0;
+    }
+}
+.page-wrapper {
+	@include clr;
+    position: relative;
+    padding: 0 12px;
+    @include rm($bp-tab-sm) {
+        width: 700px;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+}

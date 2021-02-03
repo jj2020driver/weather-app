@@ -1,0 +1,33 @@
+// Breakpoints for media queries
+$bp-desktop-lg: 1950px;
+$bp-desktop-md: 1700px;
+$bp-desktop-sm: 1400px;
+$bp-tab-lg: 1200px;
+$bp-tab-md: 980px;
+$bp-tab-sm: 750px;
+$bp-phone-lg: 620px;
+$bp-phone-md: 470px;
+$bp-phone-sm: 360px;
+
+// Transitions
+$time0: .15s;
+$time12: .22s;
+$time: .3s;
+$time45: .45s;
+$time2: .6s;
+$easeInCubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+$easeOutCubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+$easeInOutCubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+$easeOutBounce: cubic-bezier(0.175, 0.885, 0.32, 1.7);
+$easeInOutQuart: cubic-bezier(0.77, 0, 0.175, 1);;
+$easeInOutQuint: cubic-bezier(0.86, 0, 0.07, 1);
+$easeOutCirc: cubic-bezier(0.075, 0.82, 0.165, 1);
+$easeInOutCirc: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+// Colors
+$color-text-base: #262a33;
+$color-text-red: #f33;
+$color-ui-main: #0b8eea;
+$color-ui-main-darken: darken($color-ui-main, 7%);
+$color-ui-main-dark: #0e5bbb;
+$color-ui-grey: #555;

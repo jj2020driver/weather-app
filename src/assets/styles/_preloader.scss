@@ -1,0 +1,67 @@
+@keyframes preloader-cloud {
+    0% {
+        right: 0;
+    }
+    100% {
+        right: -200px;
+    }
+}
+
+.preloader {
+    padding: 120px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    &__filler {
+        flex: none;
+        display: block;
+        width: 80px;
+        visibility: hidden;
+    }
+    &__container {
+        flex: none;
+        display: flex;
+        &::before,
+        &::after {
+            content: "";
+            flex: none;
+            width: 80px;
+            height: 100%;
+            margin-right: 20px;
+            background-image: url("../images/cloud-simple.svg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+        }
+    }
+    &__containers {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        display: flex;
+        animation: preloader-cloud 1.6s linear infinite;
+    }
+    &__wrapper {
+        position: relative;
+        display: flex;
+        overflow: hidden;
+        &::before,
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 20px;
+            height: 100%;
+            z-index: 3;
+        }
+        &::before {
+            left: 0;
+            background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 0) 100%);
+        }
+        &::after {
+            right: 0;
+            background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 0) 100%);
+        }
+    }
+}
